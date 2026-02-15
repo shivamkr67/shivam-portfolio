@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivam Kumar | ML Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<canvas id="nodes"></canvas>
+<div class="mouse-glow"></div>
+
+<!-- HERO -->
+<section class="hero reveal">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Hi, I am</h1>
+            <h2>Shivam Kumar</h2>
+            <p class="typing"></p>
+
+            <div class="contact">
+                <a href="#">LinkedIn</a> |
+                <span class="phone">+91 7484005975</span> |
+                <a href="#">GitHub</a> |
+                <a href="#">Email</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="photo.jpg">
+        </div>
+    </div>
+</section>
+
+<!-- RESUME -->
+<section class="section reveal">
+    <h2>Resume</h2>
+    <p>You can view or download my resume below:</p>
+    <div class="resume-buttons">
+        <a href="resume.pdf" target="_blank">View Resume</a>
+        <a href="resume.pdf" download>Download Resume</a>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section reveal">
+    <h2>Education</h2>
+
+    <div class="card tilt">
+        <img src="lpu.jpg">
+        <h3>Lovely Professional University</h3>
+        <p>B.Tech in Computer Science & Engineering</p>
+        <p><b>CGPA:</b> 7.3</p>
+    </div>
+
+    <div class="card tilt">
+        <img src="school.jpg">
+        <h3>Radiant International School</h3>
+        <p><b>Class XII:</b> 81.4%</p>
+        <p><b>Class X:</b> 78%</p>
+        <div class="certificate-buttons">
+            <a href="12th_certificate.jpg" target="_blank">View XII Certificate</a>
+            <a href="10th_certificate.jpg" target="_blank">View X Certificate</a>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section reveal">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-box tilt">Python • C • C++ • Java • JavaScript</div>
+        <div class="skill-box tilt">Machine Learning • Feature Engineering • Logistic Regression</div>
+        <div class="skill-box tilt">TensorFlow • scikit-learn • MySQL • Google Colab</div>
+        <div class="skill-box tilt">HTML • CSS • Git • GitHub</div>
+        <div class="skill-box tilt">Prompt Engineering • AI Workflow Automation</div>
+        <div class="skill-box tilt">Adaptability • Creativity • Reliability</div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section reveal">
+    <h2>Projects</h2>
+
+    <div class="card tilt">
+        <img src="snake.png">
+        <h3>Java Snake Game</h3>
+        <p>Real-time Snake Game built using Java Swing & AWT.</p>
+    </div>
+
+    <div class="card tilt">
+        <img src="study.png">
+        <h3>AI Study Assistant</h3>
+        <p>AI-powered assistant for notes, quizzes & flashcards.</p>
+    </div>
+</section>
+
+<script>
+
+/* Typing Animation */
+const text = "Aspiring Machine Learning Engineer | CS Student";
+let i = 0;
+function typeEffect() {
+  if (i < text.length) {
+    document.querySelector(".typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 40);
+  }
+}
+typeEffect();
+
+/* Scroll Reveal */
+window.addEventListener("scroll", function() {
+  document.querySelectorAll(".reveal").forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+});
+
+/* Mouse Glow */
+const glow = document.querySelector(".mouse-glow");
+document.addEventListener("mousemove", e => {
+  glow.style.left = e.clientX + "px";
+  glow.style.top = e.clientY + "px";
+});
+
+/* 3D Tilt Effect */
+document.querySelectorAll(".tilt").forEach(card => {
+  card.addEventListener("mousemove", e => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const rotateX = (y / rect.height - 0.5) * 10;
+    const rotateY = (x / rect.width - 0.5) * -10;
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "rotateX(0) rotateY(0)";
+  });
+});
+
+/* Neural Nodes */
+const canvas = document.getElementById("nodes");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+for(let i=0;i<80;i++){
+  particles.push({
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height,
+    dx:(Math.random()-0.5)*1,
+    dy:(Math.random()-0.5)*1
+  });
+}
+
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  particles.forEach(p=>{
+    p.x+=p.dx;
+    p.y+=p.dy;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,2,0,Math.PI*2);
+    ctx.fillStyle="#00f5ff";
+    ctx.fill();
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+
+</script>
+
+</body>
+</html>
