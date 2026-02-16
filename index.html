@@ -8,12 +8,22 @@
 </head>
 <body>
 
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-logo">SK.</div>
+  <ul class="nav-links">
+    <li><a href="#home">HOME</a></li>
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#experience">EDUCATION</a></li>
+    <li><a href="#projects">PROJECTS</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+</nav>
+
 <div class="grid-bg"></div>
-<canvas id="nodes"></canvas>
-<div class="mouse-glow"></div>
 
 <!-- HERO -->
-<section class="hero reveal">
+<section id="home" class="hero">
     <div class="hero-content">
         <div class="hero-text">
             <h1>Hi, I am</h1>
@@ -34,8 +44,8 @@
     </div>
 </section>
 
-<!-- RESUME -->
-<section class="section reveal">
+<!-- ABOUT (Resume Section) -->
+<section id="about" class="section">
     <h2>Resume</h2>
     <p>You can view or download my resume below:</p>
     <div class="resume-buttons">
@@ -44,18 +54,18 @@
     </div>
 </section>
 
-<!-- EDUCATION -->
-<section class="section reveal">
+<!-- EXPERIENCE (Education Section) -->
+<section id="experience" class="section">
     <h2>Education</h2>
 
-    <div class="card tilt">
+    <div class="card">
         <img src="lpu.jpg">
         <h3>Lovely Professional University</h3>
         <p>B.Tech in Computer Science & Engineering</p>
         <p><b>CGPA:</b> 7.3</p>
     </div>
 
-    <div class="card tilt">
+    <div class="card">
         <img src="school.jpg">
         <h3>Radiant International School</h3>
         <p><b>Class XII:</b> 81.4%</p>
@@ -67,39 +77,89 @@
     </div>
 </section>
 
-<!-- SKILLS -->
-<section class="section reveal">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-        <div class="skill-box tilt">Python • C • C++ • Java • JavaScript</div>
-        <div class="skill-box tilt">Machine Learning • Feature Engineering • Logistic Regression</div>
-        <div class="skill-box tilt">TensorFlow • scikit-learn • MySQL • Google Colab</div>
-        <div class="skill-box tilt">HTML • CSS • Git • GitHub</div>
-        <div class="skill-box tilt">Prompt Engineering • AI Workflow Automation</div>
-        <div class="skill-box tilt">Adaptability • Creativity • Reliability</div>
-    </div>
-</section>
-
 <!-- PROJECTS -->
-<section class="section reveal">
+<section id="projects" class="section">
     <h2>Projects</h2>
 
-    <div class="card tilt">
+    <div class="card">
         <img src="snake.png">
         <h3>Java Snake Game</h3>
         <p>Real-time Snake Game built using Java Swing & AWT.</p>
     </div>
 
-    <div class="card tilt">
+    <div class="card">
         <img src="study.png">
         <h3>AI Study Assistant</h3>
         <p>AI-powered assistant for notes, quizzes & flashcards.</p>
     </div>
 </section>
+<!-- CERTIFICATES -->
+<section class="section reveal" id="certificates">
+    <h2>Certifications</h2>
+
+    <div class="certificate-wrapper">
+
+        <button class="slider-btn left" onclick="scrollCertificates(-1)">&#10094;</button>
+
+        <div class="certificates-slider" id="certSlider">
+
+            <div class="certificate-card tilt">
+                <span class="badge">Certified</span>
+                <img src="ml_image_processing.jpg">
+                <h3>Machine Learning & Image Processing</h3>
+                <p>ThingQbator – NASSCOM Foundation</p>
+            </div>
+
+            <div class="certificate-card tilt">
+                <span class="badge">Certified</span>
+                <img src="mobile_app_dev.jpg">
+                <h3>Mobile App Development</h3>
+                <p>ThingQbator – NASSCOM Foundation</p>
+            </div>
+
+            <div class="certificate-card tilt">
+                <span class="badge">Certified</span>
+                <img src="ai_ml_python.jpg">
+                <h3>AI & ML Using Python</h3>
+                <p>IIT Mandi – Ethical Edufabrica</p>
+            </div>
+
+            <div class="certificate-card tilt">
+                <span class="badge">Certified</span>
+                <img src="java_application.jpg">
+                <h3>Java for Application Development</h3>
+                <p>Lovely Professional University</p>
+            </div>
+
+            <div class="certificate-card tilt">
+                <span class="badge">Certified</span>
+                <img src="cert_infosys.jpg">
+                <h3>Computational Theory & Finite Automata</h3>
+                <p>Infosys Springboard</p>
+            </div>
+
+            <div class="certificate-card tilt">
+                <span class="badge">Certified</span>
+                <img src="cert_c_pathshala.jpg">
+                <h3>Mastering in C: Basic to Beyond</h3>
+                <p>CSE Pathshala – 25 Hours Live Course</p>
+            </div>
+
+        </div>
+
+        <button class="slider-btn right" onclick="scrollCertificates(1)">&#10095;</button>
+
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: shivam748400@gmail.com</p>
+</section>
 
 <script>
-
-/* Typing Animation */
 const text = "Aspiring Machine Learning Engineer | CS Student";
 let i = 0;
 function typeEffect() {
@@ -110,69 +170,6 @@ function typeEffect() {
   }
 }
 typeEffect();
-
-/* Scroll Reveal */
-window.addEventListener("scroll", function() {
-  document.querySelectorAll(".reveal").forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      el.classList.add("active");
-    }
-  });
-});
-
-/* Mouse Glow */
-const glow = document.querySelector(".mouse-glow");
-document.addEventListener("mousemove", e => {
-  glow.style.left = e.clientX + "px";
-  glow.style.top = e.clientY + "px";
-});
-
-/* 3D Tilt Effect */
-document.querySelectorAll(".tilt").forEach(card => {
-  card.addEventListener("mousemove", e => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const rotateX = (y / rect.height - 0.5) * 10;
-    const rotateY = (x / rect.width - 0.5) * -10;
-    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  });
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "rotateX(0) rotateY(0)";
-  });
-});
-
-/* Neural Nodes */
-const canvas = document.getElementById("nodes");
-const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let particles = [];
-for(let i=0;i<80;i++){
-  particles.push({
-    x:Math.random()*canvas.width,
-    y:Math.random()*canvas.height,
-    dx:(Math.random()-0.5)*1,
-    dy:(Math.random()-0.5)*1
-  });
-}
-
-function animate(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  particles.forEach(p=>{
-    p.x+=p.dx;
-    p.y+=p.dy;
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,2,0,Math.PI*2);
-    ctx.fillStyle="#00f5ff";
-    ctx.fill();
-  });
-  requestAnimationFrame(animate);
-}
-animate();
-
 </script>
 
 </body>
