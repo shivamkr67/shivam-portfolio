@@ -368,4 +368,45 @@ body {
 .slider-btn.right {
   margin-left: 10px;
 }
+/* ================= MODAL ================= */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.modal-content {
+  margin: 60px auto;
+  display: block;
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 15px;
+  box-shadow: 0 0 40px #00f5ff;
+  animation: zoomIn 0.3s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #00f5ff;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: white;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
 
