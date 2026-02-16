@@ -88,15 +88,15 @@
     <p><b>Class X:</b> 78%</p>
 
     <div class="certificate-buttons">
-        <a href="#" onclick="openModalFromSrc('12th_certificate.jpg')">
-            View XII Certificate
-        </a>
-        <a href="#" onclick="openModalFromSrc('10th_certificate.jpg')">
-            View X Certificate
-        </a>
+      <a href="#" onclick="openModalFromSrc('12th_certificate.jpg')">
+        View XII Certificate
+      </a>
+      <a href="#" onclick="openModalFromSrc('10th_certificate.jpg')">
+        View X Certificate
+      </a>
     </div>
-</div>
 
+  </div>
 </section>
 
 <!-- SKILLS -->
@@ -159,7 +159,6 @@
   <h2>Certifications</h2>
 
   <div class="certificate-wrapper">
-
     <button class="slider-btn left" onclick="scrollCertificates(-1)">&#10094;</button>
 
     <div class="certificates-slider" id="certSlider">
@@ -203,7 +202,6 @@
     </div>
 
     <button class="slider-btn right" onclick="scrollCertificates(1)">&#10095;</button>
-
   </div>
 </section>
 
@@ -242,6 +240,11 @@ function scrollCertificates(direction) {
 function openModal(img) {
   document.getElementById("certModal").style.display = "block";
   document.getElementById("modalImg").src = img.src;
+}
+
+function openModalFromSrc(src) {
+  document.getElementById("certModal").style.display = "block";
+  document.getElementById("modalImg").src = src;
 }
 
 function closeModal() {
