@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -10,10 +10,29 @@ html {
 }
 
 body {
-  background: #000814;
+  background: #050816;
   color: white;
   overflow-x: hidden;
   position: relative;
+}
+
+/* ================= FUTURISTIC GLOW BACKGROUND ================= */
+
+.bg-glow {
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, #00f5ff22, transparent 70%);
+  top: -250px;
+  left: -250px;
+  filter: blur(120px);
+  animation: floatGlow 15s ease-in-out infinite alternate;
+  z-index: -2;
+}
+
+@keyframes floatGlow {
+  from { transform: translateY(0); }
+  to { transform: translateY(120px); }
 }
 
 /* ================= NAVBAR ================= */
@@ -26,16 +45,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 8, 20, 0.85);
-  backdrop-filter: blur(12px);
+  background: rgba(10, 15, 40, 0.7);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid #00f5ff22;
   z-index: 1000;
 }
 
 .nav-logo {
+  font-family: 'Orbitron', sans-serif;
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 800;
   color: #00f5ff;
-  text-shadow: 0 0 10px #00f5ff;
+  text-shadow: 0 0 20px #00f5ff;
 }
 
 .nav-links {
@@ -49,20 +70,20 @@ body {
   color: white;
   font-size: 14px;
   letter-spacing: 1px;
-  transition: 0.3s ease;
   position: relative;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
   color: #00f5ff;
-  text-shadow: 0 0 10px #00f5ff;
+  text-shadow: 0 0 15px #00f5ff;
 }
 
 .nav-links a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: -6px;
   width: 0%;
   height: 2px;
   background: #00f5ff;
@@ -80,22 +101,22 @@ body {
   width: 100%;
   height: 100%;
   background-image:
-    linear-gradient(#00f5ff22 1px, transparent 1px),
-    linear-gradient(90deg, #00f5ff22 1px, transparent 1px);
-  background-size: 40px 40px;
-  animation: moveGrid 15s linear infinite;
+    linear-gradient(#00f5ff11 1px, transparent 1px),
+    linear-gradient(90deg, #00f5ff11 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: moveGrid 20s linear infinite;
   z-index: -3;
 }
 
 @keyframes moveGrid {
   from { background-position: 0 0; }
-  to { background-position: 40px 40px; }
+  to { background-position: 50px 50px; }
 }
 
 /* ================= HERO ================= */
 
 .hero {
-  padding: 160px 10% 100px 10%;
+  padding: 180px 10% 100px 10%;
 }
 
 .hero-content {
@@ -106,24 +127,28 @@ body {
 
 .hero-text h1 {
   font-size: 40px;
+  opacity: 0.8;
 }
 
 .hero-text h2 {
-  font-size: 55px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 60px;
   color: #00f5ff;
-  text-shadow: 0 0 20px #00f5ff;
+  text-shadow: 0 0 30px #00f5ff;
+  margin-top: 10px;
 }
 
 .typing {
   margin-top: 15px;
   font-size: 18px;
+  opacity: 0.8;
 }
 
 .contact {
   margin-top: 20px;
 }
 
-.contact a, .phone {
+.contact a {
   color: #00f5ff;
   text-decoration: none;
   margin: 0 6px;
@@ -131,7 +156,7 @@ body {
 }
 
 .contact a:hover {
-  text-shadow: 0 0 10px #00f5ff;
+  text-shadow: 0 0 15px #00f5ff;
 }
 
 /* ================= PROFILE IMAGE ================= */
@@ -141,9 +166,14 @@ body {
   height: 320px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 20%;
-  border: 4px solid #00f5ff;
-  box-shadow: 0 0 35px #00f5ff;
+  border: 3px solid #00f5ff;
+  box-shadow: 0 0 40px #00f5ff;
+  transition: 0.4s;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px #00f5ff;
 }
 
 /* ================= SECTIONS ================= */
@@ -151,29 +181,33 @@ body {
 .section {
   padding: 100px 10%;
   text-align: center;
+  position: relative;
 }
 
 .section h2 {
+  font-family: 'Orbitron', sans-serif;
   margin-bottom: 50px;
   font-size: 36px;
-  text-shadow: 0 0 15px #00f5ff;
+  color: #00f5ff;
+  text-shadow: 0 0 20px #00f5ff;
 }
 
 /* ================= CARD ================= */
 
 .card {
-  background: rgba(0, 29, 61, 0.85);
+  background: rgba(20, 30, 70, 0.6);
   padding: 35px;
   border-radius: 20px;
   margin-bottom: 50px;
-  box-shadow: 0 0 25px rgba(0,245,255,0.2);
-  transition: 0.4s ease;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(25px);
+  border: 1px solid #00f5ff22;
+  box-shadow: 0 0 30px rgba(0,245,255,0.15);
+  transition: 0.4s;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 45px rgba(0,245,255,0.6);
+  transform: translateY(-10px);
+  box-shadow: 0 0 50px rgba(0,245,255,0.4);
 }
 
 .card img {
@@ -182,6 +216,7 @@ body {
   height: 340px;
   object-fit: contain;
   margin-bottom: 20px;
+  border-radius: 15px;
 }
 
 /* ================= SKILLS ================= */
@@ -193,16 +228,16 @@ body {
 }
 
 .skill-box {
-  background: rgba(0, 29, 61, 0.85);
+  background: rgba(20, 30, 70, 0.6);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,245,255,0.2);
-  transition: 0.3s ease;
+  border: 1px solid #00f5ff22;
+  transition: 0.3s;
 }
 
 .skill-box:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 30px #00f5ff;
+  box-shadow: 0 0 30px #00f5ff55;
 }
 
 /* ================= BUTTONS ================= */
@@ -212,9 +247,10 @@ body {
   display: inline-block;
   margin: 15px;
   padding: 12px 25px;
-  background: #00f5ff;
-  color: black;
-  border-radius: 25px;
+  background: transparent;
+  color: #00f5ff;
+  border: 1px solid #00f5ff;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
@@ -222,59 +258,17 @@ body {
 
 .resume-buttons a:hover,
 .certificate-buttons a:hover {
-  background: white;
-  box-shadow: 0 0 15px #00f5ff;
-}
-/* ================= CERTIFICATES ================= */
-
-.certificates-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 40px;
-  margin-top: 40px;
+  background: #00f5ff;
+  color: black;
+  box-shadow: 0 0 20px #00f5ff;
 }
 
-.certificate-card {
-  background: rgba(0, 29, 61, 0.85);
-  padding: 30px;
-  border-radius: 20px;
-  text-align: center;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 0 25px rgba(0,245,255,0.2);
-  transition: 0.4s ease;
-}
-
-.certificate-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 45px rgba(0,245,255,0.6);
-}
-
-.certificate-card img {
-  width: 100%;
-  height: 260px;
-  object-fit: contain;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  background: #001d3d;
-  padding: 10px;
-}
-
-.certificate-card h3 {
-  color: #00f5ff;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-.certificate-card p {
-  color: #cfd8dc;
-  font-size: 15px;
-}
 /* ================= CERTIFICATE SLIDER ================= */
 
 .certificate-wrapper {
-  position: relative;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .certificates-slider {
@@ -291,19 +285,18 @@ body {
 
 .certificate-card {
   min-width: 340px;
-  background: rgba(0, 29, 61, 0.85);
+  background: rgba(20, 30, 70, 0.6);
   padding: 25px;
   border-radius: 20px;
   text-align: center;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 25px rgba(0,245,255,0.2);
-  transition: 0.4s ease;
+  border: 1px solid #00f5ff22;
+  transition: 0.4s;
   position: relative;
 }
 
 .certificate-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 0 45px rgba(0,245,255,0.6);
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px #00f5ff55;
 }
 
 .certificate-card img {
@@ -312,11 +305,11 @@ body {
   object-fit: contain;
   border-radius: 10px;
   margin-bottom: 15px;
-  background: #001d3d;
+  background: #0a0f28;
   padding: 8px;
 }
 
-/* ================= BADGE ANIMATION ================= */
+/* ================= BADGE ================= */
 
 .badge {
   position: absolute;
@@ -328,8 +321,8 @@ body {
   border-radius: 20px;
   font-size: 12px;
   font-weight: bold;
-  box-shadow: 0 0 15px #00f5ff;
-  transition: 0.4s ease;
+  box-shadow: 0 0 20px #00f5ff;
+  transition: 0.4s;
 }
 
 .certificate-card:hover .badge {
@@ -337,22 +330,21 @@ body {
 }
 
 @keyframes pulse {
-  from { box-shadow: 0 0 10px #00f5ff; }
-  to { box-shadow: 0 0 25px #00f5ff, 0 0 40px #00f5ff; }
+  from { box-shadow: 0 0 15px #00f5ff; }
+  to { box-shadow: 0 0 30px #00f5ff; }
 }
 
 /* ================= SLIDER BUTTONS ================= */
 
 .slider-btn {
-  background: rgba(0,245,255,0.15);
-  border: none;
+  background: transparent;
+  border: 1px solid #00f5ff;
   color: #00f5ff;
-  font-size: 28px;
+  font-size: 26px;
   cursor: pointer;
-  padding: 15px;
+  padding: 12px;
   border-radius: 50%;
-  transition: 0.3s ease;
-  backdrop-filter: blur(5px);
+  transition: 0.3s;
 }
 
 .slider-btn:hover {
@@ -361,13 +353,6 @@ body {
   box-shadow: 0 0 20px #00f5ff;
 }
 
-.slider-btn.left {
-  margin-right: 10px;
-}
-
-.slider-btn.right {
-  margin-left: 10px;
-}
 /* ================= MODAL ================= */
 
 .modal {
@@ -387,7 +372,7 @@ body {
   max-width: 90%;
   max-height: 85vh;
   border-radius: 15px;
-  box-shadow: 0 0 40px #00f5ff;
+  box-shadow: 0 0 50px #00f5ff;
   animation: zoomIn 0.3s ease;
 }
 
@@ -409,4 +394,40 @@ body {
   to { transform: scale(1); opacity: 1; }
 }
 
+/* ================= REVEAL ================= */
 
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .section {
+    padding: 80px 5%;
+  }
+
+}
