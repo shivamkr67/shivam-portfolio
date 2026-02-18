@@ -4,13 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shivam Kumar | ML Portfolio</title>
-
-<!-- Futuristic Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
-<link rel="icon" href="photo.jpg">
-
 </head>
 <body>
 
@@ -30,7 +24,6 @@
 </nav>
 
 <div class="grid-bg"></div>
-<div class="bg-glow"></div>
 
 <!-- HERO -->
 <section id="home" class="hero">
@@ -49,7 +42,7 @@
     </div>
 
     <div class="hero-image">
-      <img src="photo.jpg" alt="Shivam Kumar">
+      <img src="photo.jpg">
     </div>
   </div>
 </section>
@@ -82,14 +75,14 @@
   <h2>Education</h2>
 
   <div class="card">
-    <img src="lpu.jpg" alt="LPU">
+    <img src="lpu.jpg">
     <h3>Lovely Professional University</h3>
     <p>B.Tech in Computer Science & Engineering</p>
     <p><b>CGPA:</b> 7.3</p>
   </div>
 
   <div class="card">
-    <img src="school.jpg" alt="School">
+    <img src="school.jpg">
     <h3>Radiant International School</h3>
     <p><b>Class XII:</b> 81.4%</p>
     <p><b>Class X:</b> 78%</p>
@@ -102,6 +95,7 @@
         View X Certificate
       </a>
     </div>
+
   </div>
 </section>
 
@@ -148,13 +142,13 @@
   <h2>Projects</h2>
 
   <div class="card">
-    <img src="snake.png" alt="Snake Game">
+    <img src="snake.png">
     <h3>Java Snake Game</h3>
     <p>Real-time Snake Game built using Java Swing & AWT.</p>
   </div>
 
   <div class="card">
-    <img src="study.png" alt="AI Study Assistant">
+    <img src="study.png">
     <h3>AI Study Assistant</h3>
     <p>AI-powered assistant for notes, quizzes & flashcards.</p>
   </div>
@@ -257,17 +251,8 @@ function closeModal() {
   document.getElementById("certModal").style.display = "none";
 }
 
-/* Reveal Animation */
-const reveals = document.querySelectorAll(".reveal");
-window.addEventListener("scroll", () => {
-  reveals.forEach(reveal => {
-    if (reveal.getBoundingClientRect().top < window.innerHeight - 100) {
-      reveal.classList.add("active");
-    }
-  });
-});
-
 </script>
 
 </body>
 </html>
+
