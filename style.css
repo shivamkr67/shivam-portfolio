@@ -408,5 +408,145 @@ body {
   from { transform: scale(0.7); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+.github-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 22px;
+  background: transparent;
+  border: 2px solid #00f5ff;
+  color: #00f5ff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
 
+.github-btn:hover {
+  background: #00f5ff;
+  color: black;
+  box-shadow: 0 0 15px #00f5ff;
+}
+/* ================= CONTACT ================= */
+
+.contact-section {
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.contact-item {
+  background: rgba(0, 29, 61, 0.85);
+  padding: 15px 25px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(0,245,255,0.2);
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-item a {
+  color: #00f5ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #00f5ff;
+}
+
+.contact-item a:hover {
+  text-shadow: 0 0 10px #00f5ff;
+}
+/* ================= CINEMATIC STARFIELD ================= */
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: -5;
+}
+
+/* Far Stars */
+body::before {
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #00f5ff, transparent),
+    radial-gradient(1.5px 1.5px at 100px 150px, #ffffff, transparent),
+    radial-gradient(1px 1px at 200px 80px, #00f5ff, transparent),
+    radial-gradient(1.5px 1.5px at 300px 200px, #ffffff, transparent),
+    radial-gradient(2px 2px at 400px 100px, #00f5ff, transparent);
+  background-size: 500px 500px;
+  animation: moveStarsSlow 120s linear infinite, twinkle 4s ease-in-out infinite alternate;
+  opacity: 0.4;
+}
+
+/* Near Stars */
+body::after {
+  background-image:
+    radial-gradient(2px 2px at 50px 60px, #00f5ff, transparent),
+    radial-gradient(1.5px 1.5px at 150px 250px, #ffffff, transparent),
+    radial-gradient(2px 2px at 350px 150px, #00f5ff, transparent),
+    radial-gradient(1.5px 1.5px at 250px 350px, #ffffff, transparent);
+  background-size: 400px 400px;
+  animation: moveStarsFast 60s linear infinite, twinkle 3s ease-in-out infinite alternate;
+  opacity: 0.6;
+}
+
+@keyframes moveStarsSlow {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-500px, -500px); }
+}
+
+@keyframes moveStarsFast {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-400px, -400px); }
+}
+
+@keyframes twinkle {
+  from { opacity: 0.3; }
+  to { opacity: 0.7; }
+}
+/* ================= SHOOTING STAR ================= */
+
+.shooting-star {
+  position: fixed;
+  top: -50px;
+  left: -100px;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(to bottom, #ffffff, transparent);
+  transform: rotate(45deg);
+  animation: shoot 8s linear infinite;
+  z-index: -4;
+  pointer-events: none;
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(-200px, -200px) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(100vw, 100vh) rotate(45deg);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
