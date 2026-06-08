@@ -117,3 +117,176 @@ document.querySelectorAll('img').forEach(img => {
     }
   });
 });
+
+// ===== FILE CHECKER — Shows upload guide if file missing =====
+async function checkFile(event, filename) {
+  try {
+    const res = await fetch(filename, { method: 'HEAD' });
+    if (!res.ok) throw new Error('not found');
+    // File exists — let link work normally
+  } catch(e) {
+    event.preventDefault();
+    showUploadGuide(filename);
+  }
+}
+
+function showUploadGuide(filename) {
+  // Remove existing modal if any
+  document.getElementById('upload-modal')?.remove();
+
+  const guides = {
+    'Shivam_Kumar_CV_v4.pdf': {
+      icon: '📄',
+      title: 'Upload Your CV',
+      steps: [
+        'Rename your CV file to exactly: <code>Shivam_Kumar_CV_v4.pdf</code>',
+        'Go to your GitHub repo: <strong>shivamkr67/shivam-portfolio</strong>',
+        'Click "Add file" → "Upload files"',
+        'Upload the PDF → Commit changes',
+        'Wait 1–2 minutes → Done! ✅'
+      ]
+    },
+    'intel_cert.jpg': {
+      icon: '🏅',
+      title: 'Upload Intel Certificate',
+      steps: [
+        'Take a photo or screenshot of your Intel AI for All certificate',
+        'Rename the image to: <code>intel_cert.jpg</code>',
+        'Go to your GitHub repo: <strong>shivamkr67/shivam-portfolio</strong>',
+        'Click "Add file" → "Upload files"',
+        'Upload → Commit → Done! ✅'
+      ]
+    },
+    'oracle_cert.jpg': {
+      icon: '☁️',
+      title: 'Upload Oracle Certificate',
+      steps: [
+        'Take a photo or screenshot of your Oracle certificate',
+        'Rename the image to: <code>oracle_cert.jpg</code>',
+        'Go to your GitHub repo and upload it',
+        'Done! ✅'
+      ]
+    },
+    'marksheet_12.pdf': {
+      icon: '📋',
+      title: 'Upload Class XII Marksheet',
+      steps: [
+        'Scan or take a clear photo of your Class XII marksheet',
+        'Save/convert it as PDF named: <code>marksheet_12.pdf</code>',
+        'Go to your GitHub repo: <strong>shivamkr67/shivam-portfolio</strong>',
+        'Click "Add file" → "Upload files" → Upload → Commit',
+        'Done! ✅'
+      ]
+    },
+    'marksheet_10.pdf': {
+      icon: '📋',
+      title: 'Upload Class X Marksheet',
+      steps: [
+        'Scan or take a clear photo of your Class X marksheet',
+        'Save/convert it as PDF named: <code>marksheet_10.pdf</code>',
+        'Go to your GitHub repo: <strong>shivamkr67/shivam-portfolio</strong>',
+        'Click "Add file" → "Upload files" → Upload → Commit',
+        'Done! ✅'
+      ]
+    }
+  };
+
+  const info = guides[filename] || {
+    icon: '📁',
+    title: `Upload ${filename}`,
+    steps: [
+      `Rename your file to: <code>${filename}</code>`,
+      'Go to your GitHub repo: <strong>shivamkr67/shivam-portfolio</strong>',
+      'Click "Add file" → "Upload files" → Upload → Commit changes',
+      'Done! ✅'
+    ]
+  };
+
+  const modal = document.createElement('div');
+  modal.id = 'upload-modal';
+  modal.innerHTML = `
+    <div style="
+      position:fixed; inset:0; background:rgba(0,0,0,0.85); z-index:9999;
+      display:flex; align-items:center; justify-content:center; padding:20px;
+    " onclick="this.parentElement.remove()">
+      <div style="
+        background:#0d1a28; border:1px solid #00d4ff44; border-radius:20px;
+        padding:36px; max-width:480px; width:100%; position:relative;
+      " onclick="event.stopPropagation()">
+        <button onclick="document.getElementById('upload-modal').remove()" style="
+          position:absolute; top:16px; right:20px; background:none; border:none;
+          color:#94a3b8; font-size:22px; cursor:pointer; line-height:1;
+        ">✕</button>
+        <div style="font-size:48px; margin-bottom:12px;">${info.icon}</div>
+        <h3 style="color:#00d4ff; font-size:20px; margin-bottom:8px;">${info.title}</h3>
+        <p style="color:#64748b; font-size:13px; margin-bottom:20px;">
+          File <code style="color:#ff6b35; background:rgba(255,107,53,0.1); padding:2px 8px; border-radius:4px;">${filename}</code> is not in your repo yet.
+        </p>
+        <ol style="color:#94a3b8; font-size:14px; line-height:2; padding-left:20px; margin-bottom:24px;">
+          ${info.steps.map(s => `<li>${s}</li>`).join('')}
+        </ol>
+        <a href="https://github.com/shivamkr67/shivam-portfolio/upload/main" target="_blank"
+           style="
+             display:inline-flex; align-items:center; gap:8px;
+             background:linear-gradient(135deg,#00d4ff,#7c3aed);
+             color:#000; font-weight:700; padding:12px 24px;
+             border-radius:8px; text-decoration:none; font-size:14px;
+           ">
+          🚀 Open GitHub Upload Page
+        </a>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+}
+
+// Show global file checklist on first load (only in dev / if files missing)
+window.addEventListener('load', async () => {
+  const filesToCheck = [
+    { file: 'Shivam_Kumar_CV_v4.pdf', label: 'CV / Resume' },
+    { file: 'intel_cert.jpg', label: 'Intel Certificate' },
+    { file: 'oracle_cert.jpg', label: 'Oracle Certificate' },
+    { file: 'marksheet_12.pdf', label: 'Class XII Marksheet' },
+    { file: 'marksheet_10.pdf', label: 'Class X Marksheet' },
+    { file: 'lpu.jpg', label: 'LPU Photo' },
+    { file: 'school.jpg', label: 'School Photo' },
+  ];
+
+  const missing = [];
+  for (const item of filesToCheck) {
+    try {
+      const res = await fetch(item.file, { method: 'HEAD' });
+      if (!res.ok) missing.push(item);
+    } catch { missing.push(item); }
+  }
+
+  if (missing.length === 0) return; // All good!
+
+  // Show floating banner at bottom
+  const banner = document.createElement('div');
+  banner.id = 'missing-banner';
+  banner.innerHTML = `
+    <div style="
+      position:fixed; bottom:20px; right:20px; z-index:9000;
+      background:#0d1a28; border:1px solid rgba(255,107,53,0.4);
+      border-radius:14px; padding:16px 20px; max-width:320px;
+      box-shadow:0 8px 40px rgba(0,0,0,0.5);
+    ">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+        <strong style="color:#ff6b35; font-size:14px;">⚠️ ${missing.length} Files Missing</strong>
+        <button onclick="document.getElementById('missing-banner').remove()" style="background:none;border:none;color:#64748b;cursor:pointer;font-size:18px;">✕</button>
+      </div>
+      <div style="font-size:12px; color:#64748b; margin-bottom:12px;">These files need to be uploaded to your GitHub repo:</div>
+      ${missing.map(m => `
+        <div style="font-size:12px; color:#94a3b8; padding:4px 0; border-bottom:1px solid #1a3050;">
+          <span style="color:#ff6b35;">✗</span> ${m.label} <code style="color:#64748b;">(${m.file})</code>
+        </div>
+      `).join('')}
+      <a href="https://github.com/shivamkr67/shivam-portfolio/upload/main" target="_blank"
+         style="display:block;margin-top:14px;text-align:center;background:linear-gradient(135deg,#ff6b35,#ffd700);color:#000;font-weight:700;padding:9px;border-radius:8px;text-decoration:none;font-size:13px;">
+        📤 Upload Files on GitHub
+      </a>
+    </div>
+  `;
+  document.body.appendChild(banner);
+});
