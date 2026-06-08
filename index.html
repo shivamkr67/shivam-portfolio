@@ -1,308 +1,788 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shivam Kumar | ML Portfolio</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shivam Kumar — ML Engineer & Data Scientist</title>
+<meta name="description" content="Portfolio of Shivam Kumar — Machine Learning Engineer, Data Scientist, and AI Developer from Lovely Professional University." />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-logo">SK.</div>
+<!-- ===== NAV ===== -->
+<nav>
+  <a class="nav-logo" href="#hero"><span>&lt;</span>SK<span>/&gt;</span></a>
   <ul class="nav-links">
-    <li><a href="#home">HOME</a></li>
-    <li><a href="#about">ABOUT</a></li>
-    <li><a href="#resume">RESUME</a></li>
-    <li><a href="#experience">EDUCATION</a></li>
-    <li><a href="#skills">SKILLS</a></li>
-    <li><a href="#projects">PROJECTS</a></li>
-    <li><a href="#certificates">CERTIFICATES</a></li>
-    <li><a href="#contact">CONTACT</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#certificates">Certs</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#contact" class="nav-cta">Hire Me</a></li>
   </ul>
+  <div class="hamburger">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
 
-<div class="grid-bg"></div>
-
-
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="hero-content">
-    <div class="hero-text">
-      <h1>Hello, I am</h1>
-      <h2>Shivam Kumar</h2>
-      <p class="typing"></p>
-
-      <div class="contact">
-        <a href="https://www.linkedin.com/in/shivamkumar67/" target="_blank">LinkedIn</a> |
-        <a href="tel:+917484005975">+91 7484005975</a> |
-        <a href="https://github.com/shivamkr67" target="_blank">GitHub</a> |
-        <a href="mailto:shivam748400@gmail.com">Email</a>
-      </div>
-    </div>
-
-    <div class="hero-image">
-      <img src="photo.jpg">
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section reveal" id="about">
-  <h2>About Me</h2>
-  <div class="card tilt">
-    <p style="font-size:18px; line-height:1.8; max-width:900px; margin:auto;">
-      I am Shivam Kumar, a Computer Science Engineering student at Lovely Professional University
-      with strong interest in Machine Learning, Artificial Intelligence and Software Development.
-      I enjoy building interactive web applications and solving real-world problems using data-driven approaches.
-      My goal is to become a skilled Machine Learning Engineer and contribute to innovative solutions.
-    </p>
-  </div>
-</section>
-
-<!-- RESUME -->
-<section id="resume" class="section">
-  <h2>Resume</h2>
-  <p>You can view or download my resume below:</p>
-  <div class="resume-buttons">
-    <a href="resume.pdf" target="_blank">View Resume</a>
-    <a href="resume.pdf" download>Download Resume</a>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="experience" class="section">
-  <h2>Education</h2>
-
-  <div class="card">
-    <img src="lpu.jpg">
-    <h3>Lovely Professional University</h3>
-    <p>B.Tech in Computer Science & Engineering</p>
-    <p><b>CGPA:</b> 7.3</p>
-  </div>
-
-  <div class="card">
-    <img src="school.jpg">
-    <h3>Radiant International School</h3>
-    <p><b>Class XII:</b> 81.4%</p>
-    <p><b>Class X:</b> 78%</p>
-
-    <div class="certificate-buttons">
-      <a href="#" onclick="openModalFromSrc('12th_certificate.jpg')">
-        View XII Certificate
-      </a>
-      <a href="#" onclick="openModalFromSrc('10th_certificate.jpg')">
-        View X Certificate
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="section reveal" id="skills">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-
-    <div class="skill-box tilt">
-      <h3>Programming Languages</h3>
-      <p>Python • C • C++ • Java • JavaScript</p>
-    </div>
-
-    <div class="skill-box tilt">
-      <h3>Machine Learning</h3>
-      <p>Logistic Regression • Decision Trees • Feature Engineering • Model Evaluation</p>
-    </div>
-
-    <div class="skill-box tilt">
-      <h3>Frameworks & Tools</h3>
-      <p>TensorFlow • scikit-learn • Pandas • NumPy • Google Colab</p>
-    </div>
-
-    <div class="skill-box tilt">
-      <h3>Web & Development</h3>
-      <p>HTML • CSS • Git • GitHub • Responsive Design</p>
-    </div>
-
-    <div class="skill-box tilt">
-      <h3>Database</h3>
-      <p>MySQL • Basic Database Design</p>
-    </div>
-
-    <div class="skill-box tilt">
-      <h3>Soft Skills</h3>
-      <p>Problem Solving • Adaptability • Creativity • Communication</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <h2>Projects</h2>
-
-  <div class="card">
-    <img src="snake.png" alt="Java Snake Game">
-    <h3>Java Snake Game</h3>
-    <p>Real-time Snake Game built using Java Swing & AWT.</p>
-
-    <a href="https://github.com/shivamkr67/Java-Snake-Game"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="github-btn">
-       View on GitHub
-    </a>
-  </div>
-
-  <div class="card">
-    <img src="study.png" alt="AI Study Assistant">
-    <h3>AI Study Assistant</h3>
-    <p>AI-powered assistant for notes, quizzes & flashcards.</p>
-
-    <a href="https://github.com/shivamkr67/ai-study-assistant"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="github-btn">
-       View on GitHub
-    </a>
-  </div>
-
-</section>
-<!-- CERTIFICATES -->
-<section class="section reveal" id="certificates">
-  <h2>Certificates</h2>
-
-  <div class="certificate-wrapper">
-    <button class="slider-btn left" onclick="scrollCertificates(-1)">&#10094;</button>
-
-    <div class="certificates-slider" id="certSlider">
-
-      <div class="certificate-card tilt">
-        <span class="badge">Certified</span>
-        <img src="ml_image_processing.jpg" onclick="openModal(this)">
-        <h3>Machine Learning & Image Processing</h3>
-      </div>
-
-      <div class="certificate-card tilt">
-        <span class="badge">Certified</span>
-        <img src="mobile_app_dev.jpg" onclick="openModal(this)">
-        <h3>Mobile App Development</h3>
-      </div>
-
-      <div class="certificate-card tilt">
-        <span class="badge">Certified</span>
-        <img src="ai_ml_python.jpg" onclick="openModal(this)">
-        <h3>AI & ML Using Python</h3>
-      </div>
-
-      <div class="certificate-card tilt">
-        <span class="badge">Certified</span>
-        <img src="java_application.jpg" onclick="openModal(this)">
-        <h3>Java for Application Development</h3>
-      </div>
-
-      <div class="certificate-card tilt">
-        <span class="badge">Certified</span>
-        <img src="cert_infosys.jpg" onclick="openModal(this)">
-        <h3>Computational Theory & Finite Automata</h3>
-      </div>
-
-      <div class="certificate-card tilt">
-        <span class="badge">Certified</span>
-        <img src="cert_c_pathshala.jpg" onclick="openModal(this)">
-        <h3>Mastering in C</h3>
-      </div>
-
-    </div>
-
-    <button class="slider-btn right" onclick="scrollCertificates(1)">&#10095;</button>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section contact-section">
-  <h2>Contact</h2>
-
-  <div class="contact-container">
-
-    <div class="contact-item">
-      <span>📧</span>
-      <a href="mailto:shivam748400@gmail.com">
-        shivam748400@gmail.com
-      </a>
-    </div>
-
-    <div class="contact-item">
-      <span>📞</span>
-      <a href="tel:+917484005975">
-        +91 7484005975
-      </a>
-    </div>
-
-    <div class="contact-item">
-      <span>🔗</span>
-      <a href="https://www.linkedin.com/in/shivamkumar67/"
-         target="_blank"
-         rel="noopener noreferrer">
-        LinkedIn
-      </a>
-    </div>
-
-    <div class="contact-item">
-      <span>💻</span>
-      <a href="https://github.com/shivamkr67"
-         target="_blank"
-         rel="noopener noreferrer">
-        GitHub
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- MODAL -->
-<div id="certModal" class="modal">
-  <span class="close-btn" onclick="closeModal()">&times;</span>
-  <img class="modal-content" id="modalImg">
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#education">Education</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#contact">Contact</a>
 </div>
 
-<script>
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-container">
+    <div class="hero-text">
+      <div class="hero-badge">Available for Placement &amp; Internship</div>
 
-const text = "Aspiring Machine Learning Engineer | CS Student";
-let i = 0;
-function typeEffect() {
-  if (i < text.length) {
-    document.querySelector(".typing").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeEffect, 40);
-  }
-}
-typeEffect();
+      <h1 class="hero-name">
+        <div class="first">Shivam</div>
+        <div class="last">Kumar</div>
+      </h1>
 
-/* Slider */
-function scrollCertificates(direction) {
-  const slider = document.getElementById("certSlider");
-  slider.scrollLeft += direction * 370;
-}
+      <div class="hero-role"><span id="typed-role">Machine Learning Engineer</span></div>
+      <p class="hero-sub">
+        Final-year B.Tech CSE (AI & ML) student at <strong style="color:var(--cyan)">Lovely Professional University</strong>.
+        Building intelligent systems — from predictive models to deployed AI apps.
+        CGPA: 7.3 | LeetCode: 200+ problems solved.
+      </p>
 
-/* Modal */
-function openModal(img) {
-  document.getElementById("certModal").style.display = "block";
-  document.getElementById("modalImg").src = img.src;
-}
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="5" data-suffix="+">0</span>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="7" data-suffix="+">0</span>
+          <div class="stat-label">Certificates</div>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="200" data-suffix="+">0</span>
+          <div class="stat-label">LeetCode</div>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-target="73" data-suffix="%">0</span>
+          <div class="stat-label">CGPA (×10)</div>
+        </div>
+      </div>
 
-function openModalFromSrc(src) {
-  document.getElementById("certModal").style.display = "block";
-  document.getElementById("modalImg").src = src;
-}
+      <div class="hero-btns">
+        <a href="Shivam_Kumar_CV_v4.pdf" target="_blank" class="btn btn-primary">📄 View Resume</a>
+        <a href="Shivam_Kumar_CV_v4.pdf" download class="btn btn-secondary">⬇ Download CV</a>
+        <a href="#contact" class="btn btn-outline">💼 Hire Me</a>
+      </div>
+    </div>
 
-function closeModal() {
-  document.getElementById("certModal").style.display = "none";
-}
+    <!-- Photo -->
+    <div class="hero-photo-wrap">
+      <div class="hero-ring"></div>
+      <div class="hero-ring-inner"></div>
+      <div class="hero-photo">
+        <img src="photo.jpg" alt="Shivam Kumar"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+        <div class="hero-photo-placeholder" style="display:none;">👤</div>
+      </div>
 
-</script>
+      <!-- Floating badges -->
+      <div class="hero-badges-floating">
+        <div class="badge-float"><span class="dot dot-green"></span> Open to Work</div>
+        <div class="badge-float"><span class="dot dot-cyan"></span> LPU • Final Year</div>
+        <div class="badge-float"><span class="dot dot-yellow"></span> AI &amp; ML Specialist</div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-tag reveal">About Me</div>
+    <h2 class="section-title reveal">Who I Am &amp; <span class="accent">What I Do</span></h2>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm <strong>Shivam Kumar</strong>, a final-year B.Tech student specializing in <strong>Artificial Intelligence and Machine Learning</strong> at Lovely Professional University. I'm passionate about building real-world AI solutions that make a tangible impact.</p>
+        <p>My work spans the full ML lifecycle — from exploratory data analysis and feature engineering to model training, evaluation, and deployment as live web apps using Streamlit and FastAPI. I've built systems achieving <strong>R² = 0.806 with Gradient Boosting</strong> for student performance prediction.</p>
+        <p>I'm actively seeking <strong>placement opportunities</strong> in ML Engineering, Data Science, or AI Development roles. I bring hands-on project experience, strong Python skills, and a drive to keep learning and shipping.</p>
+
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <span class="highlight-icon">🎓</span>
+            <div>
+              <div class="highlight-label">Degree</div>
+              <div class="highlight-val">B.Tech CSE (AI & ML)</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">📍</span>
+            <div>
+              <div class="highlight-label">Location</div>
+              <div class="highlight-val">Phagwara, Punjab</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">📊</span>
+            <div>
+              <div class="highlight-label">CGPA</div>
+              <div class="highlight-val">7.3 / 10</div>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-icon">💻</span>
+            <div>
+              <div class="highlight-label">LeetCode</div>
+              <div class="highlight-val">200+ Problems</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-info-card reveal">
+        <div class="info-row">
+          <div class="info-icon">✉️</div>
+          <div>
+            <div class="info-label">Email</div>
+            <div class="info-val"><a href="mailto:shivamkr0267@gmail.com">shivamkr0267@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📱</div>
+          <div>
+            <div class="info-label">Phone</div>
+            <div class="info-val"><a href="tel:+918544939003">+91 8544939003</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🔗</div>
+          <div>
+            <div class="info-label">GitHub</div>
+            <div class="info-val"><a href="https://github.com/shivamkr67" target="_blank">github.com/shivamkr67</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">💼</div>
+          <div>
+            <div class="info-label">LinkedIn</div>
+            <div class="info-val"><a href="https://linkedin.com/in/shivamkr67" target="_blank">linkedin.com/in/shivamkr67</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🏫</div>
+          <div>
+            <div class="info-label">University</div>
+            <div class="info-val">Lovely Professional University</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🗓️</div>
+          <div>
+            <div class="info-label">Graduation</div>
+            <div class="info-val">2025 (Final Year)</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🌐</div>
+          <div>
+            <div class="info-label">Languages</div>
+            <div class="info-val">Hindi (Native), English (Professional)</div>
+          </div>
+        </div>
+        <div style="margin-top:20px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="Shivam_Kumar_CV_v4.pdf" download class="btn btn-primary" style="font-size:13px; padding:10px 20px;">⬇ Download CV</a>
+          <a href="#contact" class="btn btn-secondary" style="font-size:13px; padding:10px 20px;">💬 Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-tag reveal">Technical Skills</div>
+    <h2 class="section-title reveal">My <span class="accent">Tech Stack</span></h2>
+    <p class="section-desc reveal">A comprehensive set of tools and technologies I use to build, train, and deploy AI/ML solutions.</p>
+
+    <div class="skills-grid">
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">🐍</span>
+          <div>
+            <div class="skill-cat-name">Languages</div>
+            <div class="skill-cat-count">Core programming</div>
+          </div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">HTML/CSS</span>
+          <span class="skill-tag">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">🤖</span>
+          <div>
+            <div class="skill-cat-name">ML & AI</div>
+            <div class="skill-cat-count">Core expertise</div>
+          </div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">Keras</span>
+          <span class="skill-tag">OpenCV</span>
+          <span class="skill-tag">NLP</span>
+          <span class="skill-tag">Computer Vision</span>
+          <span class="skill-tag">Gradient Boosting</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">📊</span>
+          <div>
+            <div class="skill-cat-name">Data Science</div>
+            <div class="skill-cat-count">Analysis & Viz</div>
+          </div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag purple">Pandas</span>
+          <span class="skill-tag purple">NumPy</span>
+          <span class="skill-tag purple">Matplotlib</span>
+          <span class="skill-tag purple">Seaborn</span>
+          <span class="skill-tag purple">Power BI</span>
+          <span class="skill-tag purple">EDA</span>
+          <span class="skill-tag purple">Feature Engineering</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">🚀</span>
+          <div>
+            <div class="skill-cat-name">Deployment & Web</div>
+            <div class="skill-cat-count">Production & APIs</div>
+          </div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag green">Streamlit</span>
+          <span class="skill-tag green">FastAPI</span>
+          <span class="skill-tag green">Flask</span>
+          <span class="skill-tag green">Docker</span>
+          <span class="skill-tag green">Git</span>
+          <span class="skill-tag green">GitHub</span>
+          <span class="skill-tag green">GitHub Pages</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">🧠</span>
+          <div>
+            <div class="skill-cat-name">Generative AI</div>
+            <div class="skill-cat-count">LLMs & RAG</div>
+          </div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag orange">LangChain</span>
+          <span class="skill-tag orange">OpenAI API</span>
+          <span class="skill-tag orange">Gemini</span>
+          <span class="skill-tag orange">RAG</span>
+          <span class="skill-tag orange">Prompt Engineering</span>
+          <span class="skill-tag orange">Ollama</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">💡</span>
+          <div>
+            <div class="skill-cat-name">Problem Solving</div>
+            <div class="skill-cat-count">DSA & Competitive</div>
+          </div>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">LeetCode 200+</span>
+          <span class="skill-tag">Data Structures</span>
+          <span class="skill-tag">Algorithms</span>
+          <span class="skill-tag">OOP</span>
+          <span class="skill-tag">DBMS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-tag reveal">Projects</div>
+    <h2 class="section-title reveal">What I've <span class="accent">Built</span></h2>
+    <p class="section-desc reveal">Real-world AI/ML projects — trained, deployed, and live.</p>
+
+    <div class="projects-grid">
+
+      <!-- Project 1: AI Resume Screening -->
+      <div class="project-card reveal">
+        <div class="project-img">
+          <img src="resume_app.png" alt="AI Resume Screening System"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="project-img-placeholder" style="display:none;">
+            <div class="big-icon">🤖</div>
+            <span>AI Resume Screening System</span>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="project-tag">NLP</span>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Streamlit</span>
+            <span class="project-tag">ML</span>
+          </div>
+          <h3 class="project-title">AI Resume Screening System</h3>
+          <p class="project-desc">Automated recruitment tool that uses NLP to parse resumes, extract skills, and rank candidates. Features a Recruiter Console dashboard with match scores and shortlisting capabilities. Saves hours of manual HR screening.</p>
+          <div class="project-metric">📈 Live Demo on Streamlit Cloud</div>
+          <div class="project-links">
+            <a href="https://github.com/shivamkr67/ai-resume-screening" target="_blank" class="project-link github">⭐ GitHub</a>
+            <a href="https://ai-resume-screening.streamlit.app/" target="_blank" class="project-link demo">🚀 Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Student Performance Prediction -->
+      <div class="project-card reveal">
+        <div class="project-img">
+          <img src="student_app.png" alt="Student Performance Prediction"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="project-img-placeholder" style="display:none;">
+            <div class="big-icon">📊</div>
+            <span>Student Performance Prediction</span>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="project-tag">Scikit-learn</span>
+            <span class="project-tag">Gradient Boosting</span>
+            <span class="project-tag">Streamlit</span>
+            <span class="project-tag">EDA</span>
+          </div>
+          <h3 class="project-title">Student Performance Prediction</h3>
+          <p class="project-desc">ML model predicting student academic outcomes using multiple algorithms including Gradient Boosting, Random Forest, and Linear Regression. Full Streamlit app with student input form, real-time prediction, and detailed EDA visualizations.</p>
+          <div class="project-metric">🏆 R² = 0.806 with Gradient Boosting</div>
+          <div class="project-links">
+            <a href="https://github.com/shivamkr67/student-performance-prediction" target="_blank" class="project-link github">⭐ GitHub</a>
+            <a href="https://student-performance-app.streamlit.app/" target="_blank" class="project-link demo">🚀 Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: AI Study Assistant -->
+      <div class="project-card reveal">
+        <div class="project-img">
+          <img src="study_assistant.png" alt="AI Study Assistant"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="project-img-placeholder" style="display:none;">
+            <div class="big-icon">📚</div>
+            <span>AI Study Assistant</span>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="project-tag">LangChain</span>
+            <span class="project-tag">RAG</span>
+            <span class="project-tag">GenAI</span>
+            <span class="project-tag">Python</span>
+          </div>
+          <h3 class="project-title">AI Study Assistant</h3>
+          <p class="project-desc">Intelligent study tool powered by LLMs and Retrieval-Augmented Generation. Students can upload notes/PDFs and ask questions — the assistant retrieves relevant context and generates accurate, sourced answers for exam prep.</p>
+          <div class="project-metric">🧠 RAG-powered with PDF ingestion</div>
+          <div class="project-links">
+            <a href="https://github.com/shivamkr67/ai-study-assistant" target="_blank" class="project-link github">⭐ GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: AI Vocational Recommender -->
+      <div class="project-card reveal">
+        <div class="project-img">
+          <img src="vocational_app.png" alt="AI Vocational Recommender"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="project-img-placeholder" style="display:none;">
+            <div class="big-icon">🎯</div>
+            <span>AI Vocational Recommender</span>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="project-tag">ML</span>
+            <span class="project-tag">Recommendation</span>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Streamlit</span>
+          </div>
+          <h3 class="project-title">AI Vocational Recommender</h3>
+          <p class="project-desc">Career guidance system that recommends vocational courses and career paths based on student skills, interests, and academic background. Uses collaborative filtering and content-based recommendation algorithms.</p>
+          <div class="project-metric">🎓 Personalized career path recommendations</div>
+          <div class="project-links">
+            <a href="https://github.com/shivamkr67/ai-vocational-recommender" target="_blank" class="project-link github">⭐ GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5: Java Snake Game -->
+      <div class="project-card reveal">
+        <div class="project-img">
+          <img src="snake.png" alt="Java Snake Game"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="project-img-placeholder" style="display:none;">
+            <div class="big-icon">🐍</div>
+            <span>Java Snake Game</span>
+          </div>
+        </div>
+        <div class="project-content">
+          <div class="project-tags">
+            <span class="project-tag">Java</span>
+            <span class="project-tag">Swing</span>
+            <span class="project-tag">OOP</span>
+            <span class="project-tag">Game Dev</span>
+          </div>
+          <h3 class="project-title">Java Snake Game</h3>
+          <p class="project-desc">Classic Snake game built with Java Swing demonstrating strong OOP principles, event handling, and game loop architecture. Features smooth animations, score tracking, and increasing difficulty as the snake grows.</p>
+          <div class="project-metric">🎮 Java Swing • Full OOP Implementation</div>
+          <div class="project-links">
+            <a href="https://github.com/shivamkr67/java-snake-game" target="_blank" class="project-link github">⭐ GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<section id="education">
+  <div class="section-inner">
+    <div class="section-tag reveal">Education</div>
+    <h2 class="section-title reveal">Academic <span class="accent">Journey</span></h2>
+
+    <div class="edu-timeline">
+
+      <!-- LPU -->
+      <div class="edu-card reveal">
+        <div class="edu-photo">
+          <img src="lpu.jpg" alt="Lovely Professional University"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="edu-photo-placeholder" style="display:none;">🎓</div>
+        </div>
+        <div class="edu-info">
+          <h3>B.Tech — Computer Science & Engineering (AI & ML)</h3>
+          <div class="edu-inst">Lovely Professional University (LPU), Phagwara, Punjab</div>
+          <div class="edu-period">2021 – 2025 • Final Year</div>
+          <div>
+            <span class="edu-score">📊 CGPA: 7.3/10</span>
+          </div>
+          <div class="edu-detail">
+            Specialization in Artificial Intelligence & Machine Learning. Coursework includes Deep Learning, Computer Vision, NLP, Data Structures & Algorithms, DBMS, and Software Engineering. Active in coding clubs and ML competitions.
+          </div>
+        </div>
+      </div>
+
+      <!-- Class 12 -->
+      <div class="edu-card reveal">
+        <div class="edu-photo">
+          <img src="school.jpg" alt="Radiant International School"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="edu-photo-placeholder" style="display:none;">🏫</div>
+        </div>
+        <div class="edu-info">
+          <h3>Class XII — Science (PCM + CS)</h3>
+          <div class="edu-inst">Radiant International School, Bihar</div>
+          <div class="edu-period">Passed: 2021 • CBSE Board</div>
+          <div>
+            <span class="edu-score">📋 CBSE Board Exam</span>
+          </div>
+          <div class="edu-detail">
+            Science stream with Physics, Chemistry, Mathematics, and Computer Science. Strong foundation in programming and mathematics that led to pursuing engineering in AI/ML.
+          </div>
+          <a href="marksheet_12.pdf" download class="marksheet-btn">
+            📥 Download Class XII Marksheet
+          </a>
+        </div>
+      </div>
+
+      <!-- Class 10 -->
+      <div class="edu-card reveal">
+        <div class="edu-photo">
+          <img src="school.jpg" alt="School"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="edu-photo-placeholder" style="display:none;">🏫</div>
+        </div>
+        <div class="edu-info">
+          <h3>Class X — Secondary Education</h3>
+          <div class="edu-inst">Radiant International School, Bihar</div>
+          <div class="edu-period">Passed: 2019 • CBSE Board</div>
+          <div>
+            <span class="edu-score">📋 CBSE Board Exam</span>
+          </div>
+          <div class="edu-detail">
+            Completed secondary education with focus on Science and Mathematics. Built early interest in technology and problem solving.
+          </div>
+          <a href="marksheet_10.pdf" download class="marksheet-btn">
+            📥 Download Class X Marksheet
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Marksheet note -->
+    <div style="margin-top: 20px; padding: 16px 20px; background: rgba(255,215,0,0.05); border: 1px solid rgba(255,215,0,0.2); border-radius: 10px; font-size: 13px; color: var(--text3);">
+      💡 <strong style="color:var(--yellow)">Note:</strong> To enable marksheet downloads, add your marksheet PDFs (marksheet_10.pdf, marksheet_12.pdf) to your GitHub repo root. The download buttons are already linked and ready.
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATES ===== -->
+<section id="certificates">
+  <div class="section-inner">
+    <div class="section-tag reveal">Certifications</div>
+    <h2 class="section-title reveal">My <span class="accent">Credentials</span></h2>
+
+    <!-- Featured: Intel AI for All -->
+    <div class="cert-featured reveal">
+      <div class="cert-featured-img">
+        <img src="intel_cert.jpg" alt="Intel AI for All Certificate"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="cert-featured-placeholder" style="display:none;">🏅</div>
+      </div>
+      <div class="cert-featured-info">
+        <h3>Intel® AI for All</h3>
+        <div class="issuer">🏢 Intel Corporation × Skill India × NSDC</div>
+        <p>Comprehensive AI fundamentals program covering machine learning concepts, neural networks, computer vision, and ethical AI practices. Issued by Intel in partnership with Skill India and NSDC — nationally recognized certification.</p>
+        <a href="intel_cert.jpg" target="_blank" class="btn btn-secondary" style="font-size:13px; padding:10px 20px; width: fit-content;">🔍 View Certificate</a>
+      </div>
+    </div>
+
+    <!-- Oracle Certificate (New!) -->
+    <div class="cert-featured reveal" style="background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(255,215,0,0.05)); border-color: rgba(255,107,53,0.3); margin-bottom: 40px;">
+      <div class="cert-featured-img">
+        <img src="oracle_cert.pdf" alt="Oracle Certificate"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="cert-featured-placeholder" style="display:none;">☁️</div>
+      </div>
+      <div class="cert-featured-info">
+        <h3>Oracle Cloud / OCI Certification</h3>
+        <div class="issuer" style="color: var(--orange);">🏢 Oracle Corporation • Issued June 2026</div>
+        <p>Fresh Oracle certification demonstrating proficiency in Oracle Cloud Infrastructure (OCI) services, cloud architecture principles, and enterprise-level deployment strategies. A globally recognized credential from one of the world's leading technology companies.</p>
+        <a href="oracle_cert.pdf" target="_blank" class="btn btn-secondary" style="font-size:13px; padding:10px 20px; width: fit-content; border-color: var(--orange); color: var(--orange);">🔍 View Certificate</a>
+      </div>
+    </div>
+
+    <!-- Other Certificates Grid -->
+    <div class="cert-grid">
+
+      <div class="cert-card reveal">
+        <div class="cert-card-img">
+          <img src="infosys_cert.jpg" alt="Infosys Certificate"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="fallback-placeholder" style="display:none; width:100%; height:100%; align-items:center; justify-content:center; font-size:36px; background:var(--bg2);">🤖</div>
+        </div>
+        <div class="cert-issuer-badge"><span class="issuer-dot"></span> Infosys Springboard</div>
+        <h4>Generative AI Fundamentals</h4>
+        <div class="cert-date">2024</div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-card-img">
+          <img src="iitmandi_cert.jpg" alt="IIT Mandi Certificate"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="fallback-placeholder" style="display:none; width:100%; height:100%; align-items:center; justify-content:center; font-size:36px; background:var(--bg2);">🎓</div>
+        </div>
+        <div class="cert-issuer-badge"><span class="issuer-dot"></span> IIT Mandi iHub & HCI Foundation</div>
+        <h4>Machine Learning & Data Science</h4>
+        <div class="cert-date">2024</div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-card-img" style="font-size:36px;">🐍</div>
+        <div class="cert-issuer-badge"><span class="issuer-dot"></span> Coursera / Python Institute</div>
+        <h4>Python for Data Science & AI</h4>
+        <div class="cert-date">2023</div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-card-img" style="font-size:36px;">🧠</div>
+        <div class="cert-issuer-badge"><span class="issuer-dot"></span> DeepLearning.AI / Coursera</div>
+        <h4>Machine Learning Specialization</h4>
+        <div class="cert-date">2024</div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-card-img" style="font-size:36px;">📊</div>
+        <div class="cert-issuer-badge"><span class="issuer-dot"></span> Great Learning / NPTEL</div>
+        <h4>Data Structures & Algorithms</h4>
+        <div class="cert-date">2023</div>
+      </div>
+
+      <div class="cert-card reveal">
+        <div class="cert-card-img" style="font-size:36px;">☕</div>
+        <div class="cert-issuer-badge"><span class="issuer-dot"></span> HackerRank</div>
+        <h4>Java Programming (Gold Badge)</h4>
+        <div class="cert-date">2023</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACHIEVEMENTS ===== -->
+<section id="achievements">
+  <div class="section-inner">
+    <div class="section-tag reveal">Achievements</div>
+    <h2 class="section-title reveal">Highlights &amp; <span class="accent">Milestones</span></h2>
+
+    <div class="achievements-grid">
+
+      <div class="achievement-card reveal">
+        <div class="achievement-icon">🏆</div>
+        <div>
+          <div class="achievement-title">Streamlit Live Deployments</div>
+          <div class="achievement-desc">Deployed multiple ML apps on Streamlit Cloud — AI Resume Screening and Student Performance Prediction are live and publicly accessible.</div>
+        </div>
+      </div>
+
+      <div class="achievement-card reveal">
+        <div class="achievement-icon">📈</div>
+        <div>
+          <div class="achievement-title">R² = 0.806 Model Performance</div>
+          <div class="achievement-desc">Achieved R² score of 0.806 using Gradient Boosting on the Student Performance Prediction project after extensive feature engineering and hyperparameter tuning.</div>
+        </div>
+      </div>
+
+      <div class="achievement-card reveal">
+        <div class="achievement-icon">💻</div>
+        <div>
+          <div class="achievement-title">LeetCode 200+ Problems Solved</div>
+          <div class="achievement-desc">Consistently solving DSA problems on LeetCode across arrays, dynamic programming, trees, graphs, and more. Sharpening problem-solving skills for placement prep.</div>
+        </div>
+      </div>
+
+      <div class="achievement-card reveal">
+        <div class="achievement-icon">🎓</div>
+        <div>
+          <div class="achievement-title">Intel AI for All Certification</div>
+          <div class="achievement-desc">Earned nationally recognized Intel AI certification in partnership with Skill India and NSDC — covering AI fundamentals, ML, and ethical AI practices.</div>
+        </div>
+      </div>
+
+      <div class="achievement-card reveal">
+        <div class="achievement-icon">☁️</div>
+        <div>
+          <div class="achievement-title">Oracle Cloud Certified (2026)</div>
+          <div class="achievement-desc">Freshly earned Oracle Cloud Infrastructure certification in June 2026 — demonstrating expertise in cloud architecture and enterprise-level OCI services.</div>
+        </div>
+      </div>
+
+      <div class="achievement-card reveal">
+        <div class="achievement-icon">🤖</div>
+        <div>
+          <div class="achievement-title">IIT Mandi ML Certification</div>
+          <div class="achievement-desc">Completed ML & Data Science course under IIT Mandi iHub and HCI Foundation — a prestigious IIT-backed program with rigorous curriculum.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-tag reveal">Contact</div>
+    <h2 class="section-title reveal">Let's <span class="accent">Connect</span></h2>
+    <p class="section-desc reveal">Actively seeking placement opportunities in ML / Data Science / AI Engineering. Reach out — I'd love to hear from you!</p>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <a href="mailto:shivamkr0267@gmail.com" class="contact-card">
+          <div class="contact-card-icon">✉️</div>
+          <div>
+            <div class="contact-card-label">Email</div>
+            <div class="contact-card-val">shivamkr0267@gmail.com</div>
+          </div>
+        </a>
+        <a href="tel:+918544939003" class="contact-card">
+          <div class="contact-card-icon">📱</div>
+          <div>
+            <div class="contact-card-label">Phone</div>
+            <div class="contact-card-val">+91 8544939003</div>
+          </div>
+        </a>
+        <a href="https://github.com/shivamkr67" target="_blank" class="contact-card">
+          <div class="contact-card-icon">🔗</div>
+          <div>
+            <div class="contact-card-label">GitHub</div>
+            <div class="contact-card-val">github.com/shivamkr67</div>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/shivamkr67" target="_blank" class="contact-card">
+          <div class="contact-card-icon">💼</div>
+          <div>
+            <div class="contact-card-label">LinkedIn</div>
+            <div class="contact-card-val">linkedin.com/in/shivamkr67</div>
+          </div>
+        </a>
+      </div>
+
+      <form class="contact-form reveal">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="e.g. Rahul Sharma" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" placeholder="you@company.com" required />
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="e.g. Job Opportunity at XYZ" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Tell me about the role or project..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit">📨 Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-name">Shivam Kumar</div>
+    <div class="footer-tagline">ML Engineer • Data Scientist • AI Developer • Open to Placement 2025</div>
+    <div class="footer-links">
+      <a href="https://github.com/shivamkr67" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/shivamkr67" target="_blank">LinkedIn</a>
+      <a href="mailto:shivamkr0267@gmail.com">Email</a>
+      <a href="Shivam_Kumar_CV_v4.pdf" target="_blank">Resume</a>
+    </div>
+    <div class="footer-copy">© 2025 Shivam Kumar • Built with ❤️ and lots of Python</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
-
