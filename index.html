@@ -21,11 +21,10 @@
     <li><a href="#certificates">CERTIFICATES</a></li>
     <li><a href="#contact">CONTACT</a></li>
   </ul>
-  <!-- Hamburger for mobile -->
-  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
 </nav>
 
 <div class="grid-bg"></div>
+
 
 <!-- HERO -->
 <section id="home" class="hero">
@@ -43,15 +42,8 @@
       </div>
     </div>
 
-    <!-- PROFILE IMAGE - Fixed: isolated container, no external overlays -->
     <div class="hero-image">
-      <div class="profile-ring-wrapper">
-        <div class="ring ring1"></div>
-        <div class="ring ring2"></div>
-        <div class="profile-img-container">
-          <img src="photo.jpg" alt="Shivam Kumar" draggable="false">
-        </div>
-      </div>
+      <img src="photo.jpg">
     </div>
   </div>
 </section>
@@ -74,8 +66,8 @@
   <h2>Resume</h2>
   <p>You can view or download my resume below:</p>
   <div class="resume-buttons">
-    <a href="Shivam_Kumar_CV_v4.pdf" target="_blank">View Resume</a>
-    <a href="Shivam_Kumar_CV_v4.pdf" download>Download Resume</a>
+    <a href="resume.pdf" target="_blank">View Resume</a>
+    <a href="resume.pdf" download>Download Resume</a>
   </div>
 </section>
 
@@ -84,14 +76,14 @@
   <h2>Education</h2>
 
   <div class="card">
-    <img src="lpu.jpg" alt="LPU">
+    <img src="lpu.jpg">
     <h3>Lovely Professional University</h3>
     <p>B.Tech in Computer Science & Engineering</p>
     <p><b>CGPA:</b> 7.3</p>
   </div>
 
   <div class="card">
-    <img src="school.jpg" alt="Radiant International School">
+    <img src="school.jpg">
     <h3>Radiant International School</h3>
     <p><b>Class XII:</b> 81.4%</p>
     <p><b>Class X:</b> 78%</p>
@@ -104,6 +96,7 @@
         View X Certificate
       </a>
     </div>
+
   </div>
 </section>
 
@@ -153,15 +146,29 @@
     <img src="snake.png" alt="Java Snake Game">
     <h3>Java Snake Game</h3>
     <p>Real-time Snake Game built using Java Swing & AWT.</p>
+
+    <a href="https://github.com/shivamkr67/Java-Snake-Game"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="github-btn">
+       View on GitHub
+    </a>
   </div>
 
   <div class="card">
     <img src="study.png" alt="AI Study Assistant">
     <h3>AI Study Assistant</h3>
     <p>AI-powered assistant for notes, quizzes & flashcards.</p>
-  </div>
-</section>
 
+    <a href="https://github.com/shivamkr67/ai-study-assistant"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="github-btn">
+       View on GitHub
+    </a>
+  </div>
+
+</section>
 <!-- CERTIFICATES -->
 <section class="section reveal" id="certificates">
   <h2>Certificates</h2>
@@ -173,37 +180,37 @@
 
       <div class="certificate-card tilt">
         <span class="badge">Certified</span>
-        <img src="ml_image_processing.jpg" onclick="openModal(this)" alt="ML Certificate">
+        <img src="ml_image_processing.jpg" onclick="openModal(this)">
         <h3>Machine Learning & Image Processing</h3>
       </div>
 
       <div class="certificate-card tilt">
         <span class="badge">Certified</span>
-        <img src="mobile_app_dev.jpg" onclick="openModal(this)" alt="Mobile App Dev Certificate">
+        <img src="mobile_app_dev.jpg" onclick="openModal(this)">
         <h3>Mobile App Development</h3>
       </div>
 
       <div class="certificate-card tilt">
         <span class="badge">Certified</span>
-        <img src="ai_ml_python.jpg" onclick="openModal(this)" alt="AI ML Python Certificate">
+        <img src="ai_ml_python.jpg" onclick="openModal(this)">
         <h3>AI & ML Using Python</h3>
       </div>
 
       <div class="certificate-card tilt">
         <span class="badge">Certified</span>
-        <img src="java_application.jpg" onclick="openModal(this)" alt="Java Certificate">
+        <img src="java_application.jpg" onclick="openModal(this)">
         <h3>Java for Application Development</h3>
       </div>
 
       <div class="certificate-card tilt">
         <span class="badge">Certified</span>
-        <img src="cert_infosys.jpg" onclick="openModal(this)" alt="Infosys Certificate">
+        <img src="cert_infosys.jpg" onclick="openModal(this)">
         <h3>Computational Theory & Finite Automata</h3>
       </div>
 
       <div class="certificate-card tilt">
         <span class="badge">Certified</span>
-        <img src="cert_c_pathshala.jpg" onclick="openModal(this)" alt="C Certificate">
+        <img src="cert_c_pathshala.jpg" onclick="openModal(this)">
         <h3>Mastering in C</h3>
       </div>
 
@@ -214,24 +221,54 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
+<section id="contact" class="section contact-section">
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:shivam748400@gmail.com" style="color:#00f5ff;">shivam748400@gmail.com</a></p>
-  <p style="margin-top:10px;">Phone: <a href="tel:+917484005975" style="color:#00f5ff;">+91 7484005975</a></p>
-  <div style="margin-top:20px;">
-    <a href="https://www.linkedin.com/in/shivamkumar67/" target="_blank" class="contact-icon-btn">LinkedIn</a>
-    <a href="https://github.com/shivamkr67" target="_blank" class="contact-icon-btn">GitHub</a>
+
+  <div class="contact-container">
+
+    <div class="contact-item">
+      <span>📧</span>
+      <a href="mailto:shivam748400@gmail.com">
+        shivam748400@gmail.com
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <span>📞</span>
+      <a href="tel:+917484005975">
+        +91 7484005975
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <span>🔗</span>
+      <a href="https://www.linkedin.com/in/shivamkumar67/"
+         target="_blank"
+         rel="noopener noreferrer">
+        LinkedIn
+      </a>
+    </div>
+
+    <div class="contact-item">
+      <span>💻</span>
+      <a href="https://github.com/shivamkr67"
+         target="_blank"
+         rel="noopener noreferrer">
+        GitHub
+      </a>
+    </div>
+
   </div>
 </section>
 
 <!-- MODAL -->
-<div id="certModal" class="modal" onclick="closeModal()">
+<div id="certModal" class="modal">
   <span class="close-btn" onclick="closeModal()">&times;</span>
-  <img class="modal-content" id="modalImg" onclick="event.stopPropagation()">
+  <img class="modal-content" id="modalImg">
 </div>
 
 <script>
-/* Typing effect */
+
 const text = "Aspiring Machine Learning Engineer | CS Student";
 let i = 0;
 function typeEffect() {
@@ -242,11 +279,6 @@ function typeEffect() {
   }
 }
 typeEffect();
-
-/* Mobile menu toggle */
-function toggleMenu() {
-  document.querySelector('.nav-links').classList.toggle('open');
-}
 
 /* Slider */
 function scrollCertificates(direction) {
@@ -269,22 +301,8 @@ function closeModal() {
   document.getElementById("certModal").style.display = "none";
 }
 
-/* Close modal on Escape key */
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeModal();
-});
-
-/* Scroll reveal */
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1 });
-reveals.forEach(el => observer.observe(el));
 </script>
 
 </body>
 </html>
+
