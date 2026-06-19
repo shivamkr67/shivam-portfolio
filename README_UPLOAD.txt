@@ -13,3 +13,4 @@ Main updated sections:
 - Added 3D Endless Runner Game project.
 - Added Stylized Low-Poly Environment Design project.
 - Added game-development skills from the GameDev CV.
+- Updated 3D Endless Runner Game card with image and GitHub source link.
