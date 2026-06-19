@@ -20,7 +20,8 @@ const roles = [
   "Aspiring Machine Learning Engineer",
   "AI and Data Science Enthusiast",
   "Python and Streamlit Developer",
-  "NLP and Recommendation Systems Builder"
+  "NLP and Recommendation Systems Builder",
+  "Unity 3D and C# Game Developer"
 ];
 
 const typedRole = document.getElementById("typed-role");
