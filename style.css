@@ -410,6 +410,39 @@ a {
   margin-top: 34px;
 }
 
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.filter-button {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--charcoal);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.filter-button:hover,
+.filter-button:focus-visible,
+.filter-button.active {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: #ffffff;
+}
+
+.project-card[hidden] {
+  display: none !important;
+}
+
 .skills-grid,
 .cert-grid {
   display: grid;
@@ -546,6 +579,30 @@ a {
   position: relative;
 }
 
+.project-visual-automation {
+  background:
+    linear-gradient(135deg, rgba(21, 25, 34, 0.95), rgba(22, 118, 111, 0.92)),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.14) 0 1px, transparent 1px 28px);
+}
+
+.project-visual-backend {
+  background:
+    linear-gradient(135deg, rgba(21, 25, 34, 0.95), rgba(47, 79, 143, 0.92)),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.14) 0 1px, transparent 1px 28px);
+}
+
+.project-visual-docs {
+  background:
+    linear-gradient(135deg, rgba(21, 25, 34, 0.95), rgba(155, 34, 66, 0.9)),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.12) 0 1px, transparent 1px 24px);
+}
+
+.project-visual-fullstack {
+  background:
+    linear-gradient(135deg, rgba(21, 25, 34, 0.95), rgba(185, 133, 43, 0.88)),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0 1px, transparent 1px 24px);
+}
+
 .project-visual-data::before,
 .project-visual-data::after {
   content: "";
@@ -587,6 +644,22 @@ a {
 
 .cert-card h3 {
   font-size: 1rem;
+}
+
+.credential-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--teal);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.credential-link:hover,
+.credential-link:focus-visible {
+  color: var(--burgundy);
+  text-decoration: underline;
 }
 
 .timeline {
@@ -785,6 +858,15 @@ a {
   .project-links {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .project-filters {
+    gap: 8px;
+  }
+
+  .filter-button {
+    flex: 1 1 calc(50% - 8px);
+    font-size: 0.72rem;
   }
 
   .btn,

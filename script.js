@@ -17,10 +17,10 @@ if (navToggle && navLinks) {
 }
 
 const roles = [
-  "Aspiring Machine Learning Engineer",
-  "AI and Data Science Enthusiast",
-  "Python and Streamlit Developer",
-  "NLP and Recommendation Systems Builder",
+  "Software Engineer | AI/ML Developer",
+  "Backend and REST API Builder",
+  "AI/ML and Document Intelligence Developer",
+  "QA Automation and Problem-Solving Enthusiast",
   "Unity 3D and C# Game Developer"
 ];
 
@@ -54,6 +54,21 @@ function typeRole() {
 }
 
 typeRole();
+
+const filterButtons = document.querySelectorAll(".filter-button");
+const projectCards = document.querySelectorAll(".project-card[data-category]");
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+
+    filterButtons.forEach((item) => item.classList.toggle("active", item === button));
+    projectCards.forEach((card) => {
+      const categories = card.dataset.category.split(" ");
+      card.hidden = filter !== "all" && !categories.includes(filter);
+    });
+  });
+});
 
 const modal = document.getElementById("imageModal");
 const modalImage = document.getElementById("modalImage");
